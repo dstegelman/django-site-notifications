@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = 'dev'
+version = '0.1'
 
 setup(name='django-site-notifications',
       version=version,
