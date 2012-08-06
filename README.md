@@ -16,3 +16,8 @@ add to installed apps::
 
 	site_notifications
 
+add middleware::
+
+    'site_notifications.middleware.NotificationMiddleware',
+
+The middleware needs to be included below the messages framework.
