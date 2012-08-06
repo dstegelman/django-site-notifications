@@ -7,7 +7,7 @@ class NotificationQuerySet(QuerySet):
         return self.filter(enabled=True)
 
     def active_notifications(self):
-        return self.filter(start_time__lte=datetime.now(), end_time__gte=datetime.now())
+        return self.filter(start_date__lte=datetime.now(), end_date__gte=datetime.now())
 
 class NotificationManager(Manager):
     def get_query_set(self):
