@@ -8,7 +8,7 @@ http://django-site-notifications.readthedocs.org
 Install
 -------
 
-To install django-downtime::
+To install django-site-notifications::
 
 	pip install django-site-notifications
 	
