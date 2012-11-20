@@ -1,3 +1,4 @@
 __author__ = 'Derek Stegelman'
 
+SITE_NOTIFICATIONS_ENABLE_CACHE = False
 SITE_NOTIFICATIONS_CACHE = 900
