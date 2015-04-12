@@ -1,8 +1,18 @@
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 
 from site_notifications.managers import NotificationManager
-from site_notifications.choices import STATUS_CHOICES
 
+
+STATUS_CHOICES = (
+    (40, 'error'),
+    (30, 'warning'),
+    (25, 'success'),
+    (20, 'info')
+)
+
+
+@python_2_unicode_compatible
 class Notification(models.Model):
     start_date = models.DateTimeField(null=True)
     end_date = models.DateTimeField(null=True)
@@ -13,5 +23,5 @@ class Notification(models.Model):
 
     objects = NotificationManager()
 
-    def __unicode__(self):
+    def __str__(self):
         return self.message

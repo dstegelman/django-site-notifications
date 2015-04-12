@@ -5,6 +5,7 @@ from django.conf import settings
 from site_notifications.models import Notification
 from site_notifications.defaults import SITE_NOTIFICATIONS_CACHE, SITE_NOTIFICATIONS_ENABLE_CACHE
 
+
 class NotificationMiddleware(object):
 
     def process_request(self, request):
@@ -16,6 +17,8 @@ class NotificationMiddleware(object):
                 notifications = cache.get('site-notifications-notifications')
         else:
             notifications = Notification.objects.active_notifications()
+
         for notify in notifications:
             messages.add_message(request, notify.status, notify.message)
+
         return None
