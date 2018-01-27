@@ -1,5 +1,7 @@
 Enable a message on every page load.
 
+> Looking For Authors!  This project is currently looking for a user to take it over.  If that sounds like you, send a note to derek at stegelman dot com or open up an issue in this repository.
+
 Official Docs
 -------------
 
